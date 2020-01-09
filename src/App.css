@@ -1,5 +1,9 @@
 .App {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,14 +39,6 @@
   margin: auto;
   margin-bottom: 10px;
   font-size: 0.8em;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
 }
 
 .card {
