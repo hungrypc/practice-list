@@ -12,6 +12,7 @@ const Nav = () => {
             <div className="menu">
                <Link className="item" to="/list">List</Link>
                <Link className="item" to="/search">Search</Link>
+               <Link className="item" to="/youtube">Youtube</Link>
             </div>
          </div>
 
