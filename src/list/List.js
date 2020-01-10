@@ -18,7 +18,7 @@ class List extends Component {
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
-    }) 
+    })
     console.log(this.state)
   }
 
@@ -38,15 +38,22 @@ class List extends Component {
   render() {
     return (
       <div className="list">
-        <div className="form">
-            Name: <input className="text-input" name="name" type="text" value={this.state.name} onChange={this.handleChange}></input>
-            Text: <input className="text-input" name="text" type="text" value={this.state.text} onChange={this.handleChange}></input>
-            <button onClick={this.handleSubmit}>Submit</button>
+        <div className="ui list-container">
+          <div className="ui segment form list-form">
+            <div className="list-field">
+              <input className="text-input" name="name" type="text" placeholder="Name"
+              value={this.state.name} onChange={this.handleChange} autoComplete="off"></input>
+              <input className="text-input" name="text" type="text" placeholder="Text"
+              value={this.state.text} onChange={this.handleChange} autoComplete="off"></input>
+              <button className="ui button" onClick={this.handleSubmit}>Submit</button>
+            </div>
           </div>
-  
+
           {this.state.content.map((item, index) => (
             <Card key={index} name={item['name']} text={item['text']} ></Card>
           ))}
+        </div>
+
       </div>
     );
   }

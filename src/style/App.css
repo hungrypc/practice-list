@@ -1,3 +1,9 @@
 .App {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-page .welcome {
+  text-align: center;
 }
