@@ -3,7 +3,7 @@ import React from 'react';
 const Card = (props) => {
 
     let today = new Date();
-    let date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}  ${today.getHours()}:${today.getMinutes()}`
+    let date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}  ${today.getHours()}:${(today.getMinutes()<10?'0':'') + today.getMinutes()}`
 
     return (
         <div className="ui cards">
