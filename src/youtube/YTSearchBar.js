@@ -18,7 +18,7 @@ class YTSearchBar extends Component {
 
     onSubmit = () => {
         event.preventDefault();
-        // this.props.onSubmit(this.state.term)
+        this.props.onFormSubmit(this.state.term)
     }
 
 
