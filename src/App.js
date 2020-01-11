@@ -6,7 +6,7 @@ import Home from './Home';
 import List from './list/List';
 import Search from './search/Search';
 import Youtube from './youtube/Youtube';
-import Songs from './songs/Songs';
+import Songs from './songs/components/Songs';
 import './style/App.css';
 
 class App extends Component {
