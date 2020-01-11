@@ -6,6 +6,7 @@ import Home from './Home';
 import List from './list/List';
 import Search from './search/Search';
 import Youtube from './youtube/Youtube';
+import Songs from './songs/Songs';
 import './style/App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
               <Route path='/list' component={List} exact/>
               <Route path='/search' component={Search} exact />
               <Route path='/youtube' component={Youtube} exact />
+              <Route path='/songs' component={Songs} exact />
             </Switch>
         </div>
       </BrowserRouter>
