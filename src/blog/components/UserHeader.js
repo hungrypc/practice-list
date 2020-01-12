@@ -7,17 +7,22 @@ class UserHeader extends Component {
         this.props.fetchUser(this.props.userId);
     }
     render() {
-        console.log(this.props)
+        const user = this.props.users.find(user => user.id === this.props.userId)
+
+        if(!user) {
+            return null
+        }
+
         return (
-            <div>
-                {this.props.user}
+            <div className="header">
+                {user.name}
             </div>
         )
     };
 };
 
 const mapStateToProps = (state) => {
-    return { user: state.user.name }
+    return { users: state.users }
 }
 
 export default connect(mapStateToProps, { fetchUser })(UserHeader);
