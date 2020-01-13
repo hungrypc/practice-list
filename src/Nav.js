@@ -15,6 +15,7 @@ const Nav = () => {
                <Link className="item" to="/youtube">Youtube</Link>
                <Link className="item" to="/songs">Songs</Link>
                <Link className="item" to="/blog">Blog</Link>
+               <Link className="item" to="/stream">Stream</Link>
             </div>
          </div>
 
