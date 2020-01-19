@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 import UserCreate from './UserCreate';
+import LanguageSelector from './LanguageSelector';
 import LanguageContext from './contexts/LanguageContext';
+import ColorContext from './contexts/ColorContext';
 
 class App extends Component {
     state = { language: 'english' }
@@ -15,16 +17,15 @@ class App extends Component {
     render() {
         return (
             <div className="ui container">
-                <div>
-                    Select a language:
-                    <i className="flag us" onClick={() => this.onLanguageChange('english')} />
-                    <i className="flag nl" onClick={() => this.onLanguageChange('dutch')} />
-                </div>
+                <LanguageSelector onLanguageChange={this.onLanguageChange} />
                 {/* UserCreate is what needs to know some info out of the context object */}
                 {/* value is required */}
-                <LanguageContext.Provider value={this.state.language}>
-                    <UserCreate />
-                </LanguageContext.Provider>
+                <ColorContext.Provider value="red">
+                    <LanguageContext.Provider value={this.state.language}>
+                        <UserCreate />
+                    </LanguageContext.Provider>
+                </ColorContext.Provider>
+                {/* every time we render an instance of the provider, we create a new separate 'pipe' of info */}
             </div>
         );
     }
