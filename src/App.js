@@ -8,7 +8,7 @@ import Search from './search/Search';
 import Youtube from './youtube/Youtube';
 import Songs from './songs/components/Songs';
 import Blog from './blog/components/Blog';
-import Stream from './stream/components/Stream';
+import Language from './language/Language';
 
 import './style/App.css';
 
@@ -26,6 +26,7 @@ class App extends Component {
               <Route path='/youtube' component={Youtube} exact />
               <Route path='/songs' component={Songs} exact />
               <Route path='/blog' component={Blog} exact />
+              <Route path='/language' component={Language} exact />
             </Switch>
           </div>
         </BrowserRouter>
