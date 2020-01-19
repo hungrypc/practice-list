@@ -15,8 +15,8 @@ class Button extends Component {
     // this.context is for when we get info from a single context obj
     // consumers are used when we have multiple contexts
 
-    renderSubmit(value) {
-        return value === 'english' ? 'Submit' : 'Voorleggen';
+    renderSubmit(language) {
+        return language === 'english' ? 'Submit' : 'Voorleggen';
     }
 
     renderColor(color) {
@@ -32,7 +32,7 @@ class Button extends Component {
                         <LanguageContext.Consumer>
                             {/* this child is always going to be a function */}
                             {/* {(value) => value === 'english' ? 'Submit' : 'Voorleggen'} OR */}
-                            {value => this.renderSubmit(value)}
+                            {({ language }) => this.renderSubmit(language)}
                         </LanguageContext.Consumer>
                     </button >
                 )}
