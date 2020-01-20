@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import ResourceList from './ResourceList';
+import UserList from './userList';
 
 
 const Todo = () => {
@@ -8,6 +9,7 @@ const Todo = () => {
 
     return (
         <div className="ui container">
+            <UserList />
             <div>
                 <button onClick={() => setResource('posts')}>Posts</button>
                 <button onClick={() => setResource('todos')}>Todos</button>
