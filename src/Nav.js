@@ -16,6 +16,7 @@ const Nav = () => {
                <Link className="item" to="/songs">Songs</Link>
                <Link className="item" to="/blog">Blog</Link>
                <Link className="item" to="/language">Language</Link>
+               <Link className="item" to="/todo">Todo</Link>
             </div>
          </div>
 
