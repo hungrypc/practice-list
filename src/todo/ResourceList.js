@@ -1,10 +1,13 @@
 import React from 'react';
 
-const ResourceList = (props) => {
+import useResources from './useResources';
+
+const ResourceList = ({ resource }) => {
+    const data = useResources(resource);
     return (
-        <div>
-            {props.resource}
-        </div>
+        <ul>
+            {data.map(record => <li key={record.id}>{record.title}</li>)}
+        </ul>
     );
 };
 
